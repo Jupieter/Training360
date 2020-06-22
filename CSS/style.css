@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lobster&display=swap');
+
+@font-face{
+    Dancing
+}
+
+h1{
+    color: red;
+    font-family: 'Dancing Script', cursive;
+    text-transform: uppercase;
+}
+
+h2{
+    font-family: 'Dancing Script', cursive;
+    text-transform: capitalize;
+
+}
+p{
+    font-family: 'Lobster', cursive;
+    color: grey;
+    text-align: justify;
+    font-weight: 300;
+    line-height: initial;
+}
+
+li{
+    color: gray;font-size: 24;
+}
+
+img{
+    width:200px;
+}
