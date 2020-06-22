@@ -3,7 +3,18 @@
 @font-face{
     Dancing
 }
-
+#bioheader{
+    color: purple;
+}
+.comment{
+    color: lightgray;
+}
+.bold{
+    font-weight: bold;
+}
+.img-div{
+    background-color: lightskyblue;
+}
 h1{
     color: red;
     font-family: 'Dancing Script', cursive;
@@ -13,7 +24,6 @@ h1{
 h2{
     font-family: 'Dancing Script', cursive;
     text-transform: capitalize;
-
 }
 p{
     font-family: 'Lobster', cursive;
@@ -28,5 +38,6 @@ li{
 }
 
 img{
-    width:200px;
+    height:200px;
+
 }
