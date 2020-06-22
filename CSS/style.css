@@ -8,7 +8,7 @@
 }
 .comment{
     color: lightgray;
-    margin: 10px 20px;
+    
 }
 .bold{
     font-weight: bold;
@@ -20,11 +20,13 @@ h1{
     color: red;
     font-family: 'Dancing Script', cursive;
     text-transform: uppercase;
+    margin: 10px;
 }
 
 h2{
     font-family: 'Dancing Script', cursive;
     text-transform: capitalize;
+    margin: 10px;
 }
 p{
     font-family: 'Lobster', cursive;
@@ -33,6 +35,9 @@ p{
     text-align: justify;
     font-weight: 300;
     line-height: initial;
+    margin: 10px 40px;
+    border: solid 5px darkgray;
+    padding: 10px;
 }
 
 li{
@@ -41,5 +46,7 @@ li{
 
 img{
     height:200px;
+    box-shadow: 3px 3px 10px black;
+    margin: 10px;
 
 }
