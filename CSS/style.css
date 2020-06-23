@@ -73,7 +73,9 @@ li{
 
 img{
     height:200px;
+    position: right;
     box-shadow: 3px 3px 10px black;
+    border-radius: 10px;
     margin: 1%;
 
 }
