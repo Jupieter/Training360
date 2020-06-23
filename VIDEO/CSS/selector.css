@@ -1,0 +1,47 @@
+body{
+    background-color: #f0f0f0;
+}
+
+.login-div {
+    padding: 15px;
+    border: solid 1px #c0c0c0;
+    box-shadow: 0 0 2px #777777;
+    display: inline-block;
+}
+<!-- .login-div input{
+    padding 3px
+    display: block;
+    margin-bottom: 7px;
+} -->
+
+input[class*="control"] { 
+    <!-- a control azonosító bárhol -->
+    border-color: gray;
+    display: block; 
+}
+input[class^="blue"] {
+    <!-- a blue az azonosító elején -->
+    border-color: blue;
+    border: solid 1px blue;
+}
+input[class$="red"] {
+    <!-- a red az azonosító végén -->
+    border-radius: 10px;
+    border: solid 1px red;
+}
+.login-div button:hover {
+    box-shadow: 2px 2px 3px #d0d0d0;
+}
+.login-div input:focus {
+    box-shadow: 2px 2px 3px #c0c0c0c;
+    border: none;
+}
+ul li:last-child {
+    text-decoration: underline;
+}
+ul li:first-child {
+    color: red;
+}
+ul li:nth-child(2) {
+    color: blue;
+}
