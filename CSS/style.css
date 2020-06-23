@@ -3,11 +3,33 @@
 @font-face{
     Dancing
 }
+
+body {
+    background-color:#ffd400;
+}
+
+#navcontainer ul {list-style-type: none; text-align: left;
+    padding: 0px; float: left; width: 100%}
+ 
+#navcontainer li {display: inline}
+ 
+#navcontainer a {text-decoration: none; color: #ffee00;
+    background-color: #881000; text-align: center;
+    border-color: #aa1000; border-style: outset;
+    border-width: 3px; font-size: 24pt;
+    border-radius: 10px;
+    font-weight: bold; font-family: Times New Roman;
+    margin-top: 5px; margin-right: 0px;
+    margin-bottom: 5px; margin-left: 0px;
+    padding-top: 0px; padding-right: 5px;
+    padding-bottom: 0px; padding-left: 5px}
+
 #bioheader{
     color: purple;
 }
 .comment{
     color: lightgray;
+    max-width: 75%;
     
 }
 .bold{
@@ -16,6 +38,11 @@
 .img-div{
     background-color: lightskyblue;
 }
+
+#img2{
+    position: relative;
+}
+
 h1{
     color: red;
     font-family: 'Dancing Script', cursive;
@@ -47,6 +74,6 @@ li{
 img{
     height:200px;
     box-shadow: 3px 3px 10px black;
-    margin: 10px;
+    margin: 1%;
 
 }
