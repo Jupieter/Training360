@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lobster&display=swap');
 
 @font-face{
@@ -8,21 +9,50 @@ body {
     background-color:#ffd400;
 }
 
-#navcontainer ul {list-style-type: none; text-align: left;
-    padding: 0px; float: left; width: 100%}
- 
-#navcontainer li {display: inline}
- 
-#navcontainer a {text-decoration: none; color: #ffee00;
-    background-color: #881000; text-align: center;
+.btn-primary {
+    color: #ffee00;
+    background-color: #881000;
+    border-color: #5bc2c2
+}
+
+.btn-primary:hover {
+    color: #212529;
+    background-color: #52bebe;
+    border-color: #8ad3d3
+}
+
+.btn-primary:focus,
+.btn-primary.focus {
+    box-shadow: 0 0 0 .2rem rgba(91, 194, 194, 0.5)
+}
+.menu  {text-decoration: none; color: #ffee00;
+    background-color: #881000; 
     border-color: #aa1000; border-style: outset;
     border-width: 3px; font-size: 24pt;
     border-radius: 10px;
-    font-weight: bold; font-family: Times New Roman;
-    margin-top: 5px; margin-right: 0px;
-    margin-bottom: 5px; margin-left: 0px;
-    padding-top: 0px; padding-right: 5px;
-    padding-bottom: 0px; padding-left: 5px}
+    font-weight: bold; font-family: Times Dancing; 
+    margin-top: 5px; margin-right: 5px;
+    margin-bottom: 5px; margin-left: 5px;
+    padding-top: 5px; padding-right: 10px;
+    padding-bottom: 5px; padding-left: 10px}
+}  
+
+
+#navcontainer ul {list-style-type: none; text-align: right;
+    padding: 10px; float: center;font-size: 24px; width: 100%}
+ 
+#navcontainer li {display: inline; padding: 5px; }
+ 
+#navcontainer a {text-decoration: none; color: #ffee00;
+    background-color: #881000; 
+    border-color: #aa1000; border-style: outset;
+    border-width: 3px; font-size: 24pt;
+    border-radius: 10px;
+    font-weight: bold; font-family: Times Dancing;
+    margin-top: 5px; margin-right: 5px;
+    margin-bottom: 5px; margin-left: 5px;
+    padding-top: 5px; padding-right: 10px;
+    padding-bottom: 5px; padding-left: 10px}
 
 #bioheader{
     color: purple;

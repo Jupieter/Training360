@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lobster&display=swap');
+
+@font-face{
+    Dancing
+}
+
+body{
+    background-color:#ffd400;
+}
+.btn-lg {
+    font-family: Dancing;
+    color: #ffee00;
+    background-color: #881000;
+    border-color: #5bc2c2;
+    width: 100%;
+    
+}
+.btn-lg:hover {
+    color: #ffffff;
+    background-color: #c21700;
+    border-color: #5bc2c2;
+    width: 100%;
+}
+h1 {
+    font-weight: bold;
+    text-align: center;
+    color: 881000;
+    font-family: 'Dancing Script', cursive;
+    text-transform: uppercase;
+    margin: 20px;
+    
+}
