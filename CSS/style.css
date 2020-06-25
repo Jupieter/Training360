@@ -78,6 +78,7 @@ h1{
     font-family: 'Dancing Script', cursive;
     text-transform: uppercase;
     margin: 10px;
+    text-shadow: 3px 3px 10px gray;
 }
 
 h2{
