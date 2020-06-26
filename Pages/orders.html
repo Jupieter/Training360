@@ -5,35 +5,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Orders</title>
-    <link rel="stylesheet" href="/CSS/style.css">
+    <link rel="stylesheet" href="/lib/bootstrap-4.5.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/CSS/style2.css">
 </head>
 
 <body>
-    <div id="navcontainer">
-        <ul>
-            <li>
-                <a href="/index.html">Home</a>
-            </li>
-            <li>
-                <a href="/Pages/products.html">Products</a>
-            </li>
-            <li>
-                <a href="/Pages/orders.html">Orders</a>
-            </li>
-            <li>
-                <a href="/Pages/about.html">About</a>
-            </li>
-        </ul>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <a href="/index.html" class="btn btn-lg" role="button">Home</a>
+            </div>
+            <div class="col-sm-3">
+                <a href="/Pages/products.html" class="btn btn-lg active" role="button">Products</a>
+            </div>
+            <div class="col-sm-3">
+                <a href="/Pages/orders.html" class="btn btn-lg active" role="button">Orders</a>
+            </div>
+            <div class="col-sm-3">
+                <a href="/Pages/about.html" class="btn btn-lg active" role="button">About</a>
+            </div>
+        </div>
     </div>
-    <h1>Orders</h1>
+    <h1 class="barName" style="text-shadow:0px 0px 10px black">Fantastic Burger Bar</h1>
+    <h2 style="text-align: center;">Orders</h2>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-2">
+                <h2>Step of order</h2>
+                <ol>
+                    <li> Choose a Burger</li>
+                    <li>Buy it</li>
+                    <li>Give your adress</li>
+                    <li>Eat it!</li>
+                </ol>
+            </div>
+            <div class="col-sm-1"> </div>
+            <div class="col-sm-4">
+                <img class="img-fluid" src="/Pictures/ordershez.jfif" alt="burger yammie">
+            </div>
+            <div class="col-sm-1"> </div>
+            <div class="col-sm-3">
+                <h2>Login</h2>
+                <form action="/action_page.php">
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="pwd">Password:</label>
+                        <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" name="remember"> Remember me
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
 
-    <h2>Step of order</h2>
-    <ol>
-        <li> Choose a Burger</li>
-        <li>Buy it</li>
-        <li>Give your adress</li>
-        <li>Eat it!</li>
-    </ol>
+
+    </div>
 </body>
 
 </html>
