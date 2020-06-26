@@ -111,3 +111,25 @@ img{
     width: 60px;
     padding: 10px;
   }
+  .center{
+    width: 150px;
+}
+.input-group-btn{
+    font-family: 'Dancing Script', cursive;
+    font-size: 18px;
+    color: #c21700;
+    background-color: #ffc107;
+    border: solid 1px #ee8700;
+    width: 40px;
+    vertical-align: middle;
+    margin: 0px 2px 0 2px;
+    
+}
+.input-group-btn:hover {
+    color: #ffffff;
+    background-color: #881000;
+    border-color: #eeeeee;
+}
+.input-number{
+    margin: 1px;
+}
