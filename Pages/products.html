@@ -8,11 +8,12 @@
     <title>Burger Bar Products</title>
     <link rel="stylesheet" href="/lib/bootstrap-4.5.0-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/CSS/style2.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
 </head>
 
 <body>
-    <div class="container">
+    <div id="Food0" class="container">
         <div class="row">
             <div class="col-sm-3">
                 <a href="/index.html" class="btn btn-lg" role="button">Home</a>
@@ -30,22 +31,42 @@
     </div>
     <h1 class="barName" style="text-shadow:0px 0px 10px black">Fantastic Burger Bar</h1>
     <h2 style="text-align: center;"> Products </h2>
-
     <div class="container">
         <div class="row">
-
+            <div class="col-sm-2">
+                
+                <a href="#Food1" class="btn btn-sm active" role="button">Meat Burgers</a>
+            </div>
+            <div class="col-sm-2">
+                <a href="#Food2" class="btn btn-sm active" role="button">Vegan Burgers</a>
+            </div>
+            <div class="col-sm-2">
+                <a href="#Food3" class="btn btn-sm active" role="button">Salads</a>
+            </div>
+            <div class="col-sm-2">
+                <a href="#Food4" class="btn btn-sm active" role="button">Drinks</a>
+            </div>
+            <div class="col-sm-2">
+                <a href="#Food5" class="btn btn-sm active" role="button">Shakes</a>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <div class="row">
+            
             <div class="col-sm-1"></div>
             <div class="col-sm8-8">
             </div>
-            <h2 class="adrs">Meat Burgers: </h2>
-
+            <h2 id="Food1" class="adrs">Meat Burgers: </h2>
+            
             <table class="TabProd table table-striped table-hover">
-                <thead>
+                <thead >
                     <tr>
                         <th>Food</th>
                         <th>Ingredients</th>
                         <th>Price</th>
-
+                        
                     </tr>
                 </thead>
                 <tbody>
@@ -55,7 +76,7 @@
                         <td>4 $</td>
                     </tr>
                     <tr>
-                        <td>Hamburger 2 <span class="badge badge-secondary">New</span></td>
+                        <td>Hamburger 2 <span class="badge badge-secondary">Action</span></td>
                         <td>meat, salad, tomato, cucumber, onion, spices,</td>
                         <td>4 $</td>
                     </tr>
@@ -64,19 +85,35 @@
                         <td>meat, salad, tomato, cucumber, onion, spices,</td>
                         <td>4 $</td>
                     </tr>
+                    <tr>
+                        <td>Hamburger 4 </td>
+                        <td>meat, salad, tomato, cucumber, onion, spices,</td>
+                        <td>4 $</td>
+                    </tr>
+                    <tr>
+                        <td>Hamburger 5 <span class="badge badge-secondary">New</span></td>
+                        <td>meat, salad, tomato, cucumber, onion, spices,</td>
+                        <td>4 $</td>
+                    </tr>
+                    <tr>
+                        <td>Hamburger 6 </td>
+                        <td>meat, salad, tomato, cucumber, onion, spices,</td>
+                        <td>4 $</td>
+                    </tr>
                 </tbody>
             </table>
             <div class="col-sm-1"></div>
         </div>
     </div>
+    <a href="#Food0" class="btn-sm active right" role="button" > Up <i class="fas fa-level-up-alt"></i></a>
     <br>
     <div class="container">
         <div class="row">
-
+            
             <div class="col-sm-1"></div>
             <div class="col-sm8-8">
             </div>
-            <h2 class="adrs">Vegan Burgers: </h2>
+            <h2  id="Food2" class="adrs">Vegan Burgers: </h2>
 
             <table class="TabProd table table-striped table-hover">
                 <thead>
@@ -84,7 +121,7 @@
                         <th>Food</th>
                         <th>Ingredients</th>
                         <th>Price</th>
-
+                        
                     </tr>
                 </thead>
                 <tbody>
@@ -103,19 +140,34 @@
                         <td>oat, salad, tomato, cucumber, onion, spices,</td>
                         <td>4 $</td>
                     </tr>
+                    <tr>
+                        <td>Hamburger 4 </td>
+                        <td>cheese, salad, tomato, cucumber, onion, spices,</td>
+                        <td>4 $</td>
+                    </tr>
+                    <tr>
+                        <td>Hamburger 5 <span class="badge badge-secondary">Action</span></td>
+                        <td>mushroom, salad, tomato, cucumber, onion, spices,</td>
+                        <td>4 $</td>
+                    </tr>
+                    <tr>
+                        <td>Hamburger 5 </td>
+                        <td>oat, salad, tomato, cucumber, onion, spices,</td>
+                        <td>4 $</td>
+                    </tr>
                 </tbody>
             </table>
             <div class="col-sm-1"></div>
         </div>
     </div>
-    <br>
+    <a href="#Food0" class="btn-sm active right" role="button" > Up <i class="fas fa-level-up-alt"></i></a>
     <div class="container">
         <div class="row">
 
             <div class="col-sm-1"></div>
             <div class="col-sm8-8">
             </div>
-            <h2 class="adrs">Salad: </h2>
+            <h2  id="Food3" class="adrs">Salads: </h2>
 
             <table class="TabProd table table-striped table-hover">
                 <thead>
@@ -133,12 +185,26 @@
                         <td>4 $</td>
                     </tr>
                     <tr>
-                        <td>Salad 2 <span class="badge badge-secondary">New</span></td>
+                        <td>Salad 2 <span class="badge badge-secondary">Action</span></td>
                         <td>mushroom, salad, tomato, cucumber, onion, spices,</td>
                         <td>4 $</td>
                     </tr>
                     <tr>
                         <td>Salat 3 </td>
+                        <td>oat, salad, tomato, cucumber, onion, spices,</td>
+                        <td>4 $</td>
+                    <tr>
+                        <td>Salad 4 </td>
+                        <td>cheese, salad, tomato, cucumber, onion, spices,</td>
+                        <td>4 $</td>
+                    </tr>
+                    <tr>
+                        <td>Salad 5 <span class="badge badge-secondary">Last</span></td>
+                        <td>mushroom, salad, tomato, cucumber, onion, spices,</td>
+                        <td>4 $</td>
+                    </tr>
+                    <tr>
+                        <td>Salat 6 </td>
                         <td>oat, salad, tomato, cucumber, onion, spices,</td>
                         <td>4 $</td>
                     </tr>
@@ -147,6 +213,7 @@
             <div class="col-sm-1"></div>
         </div>
     </div>
+    <a href="#Food0" class="btn-sm active right" role="button" > Up <i class="fas fa-level-up-alt"></i></a>
 </body>
 
 </html>

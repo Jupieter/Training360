@@ -16,7 +16,7 @@ body{
     font-size: 24px;
     color: #ffee00;
     background-color: #881000;
-    border-color: #5bc2c2;
+    border-color: #ee0000;
     width: 100%;
     margin: 20px;
     
@@ -24,7 +24,23 @@ body{
 .btn-lg:hover {
     color: #ffffff;
     background-color: #c21700;
-    border-color: #5bc2c2;
+    border-color: #eeeeee;
+    width: 100%;
+}
+.btn-sm {
+    font-family: 'Dancing Script', cursive;
+    font-size: 18px;
+    color: #c21700;
+    background-color: #ffc107;
+    border: solid 1px #ee8700;
+    width: 100%;
+    margin: 20px;
+    
+}
+.btn-sm:hover {
+    color: #ffffff;
+    background-color: #881000;
+    border-color: #eeeeee;
     width: 100%;
 }
 .barName {
@@ -82,3 +98,16 @@ img{
     height:100%;
     width:100%;
     position:absolute;
+}
+.right {
+    float: right;
+    text-align: center;
+    width: 60px;
+    padding: 10px;
+  }
+  .right:hover {
+    float: right;
+    text-align: center;
+    width: 60px;
+    padding: 10px;
+  }
