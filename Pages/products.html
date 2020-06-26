@@ -4,40 +4,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products</title>
-    <link rel="stylesheet" href="/CSS/style.css">
+    <title></title>
+    <title>Burger Bar Products</title>
+    <link rel="stylesheet" href="/lib/bootstrap-4.5.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/CSS/style2.css">
 
 </head>
 
 <body>
-    <div id="navcontainer">
-        <ul>
-            <li>
-                <a href="/index.html">Home</a>
-            </li>
-            <li>
-                <a href="/Pages/products.html">Products</a>
-            </li>
-            <li>
-                <a href="/Pages/orders.html">Orders</a>
-            </li>
-            <li>
-                <a href="/Pages/about.html">About</a>
-            </li>
-        </ul>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <a href="/index.html" class="btn btn-lg" role="button">Home</a>
+            </div>
+            <div class="col-sm-3">
+                <a href="/Pages/products.html" class="btn btn-lg active" role="button">Products</a>
+            </div>
+            <div class="col-sm-3">
+                <a href="/Pages/orders.html" class="btn btn-lg active" role="button">Orders</a>
+            </div>
+            <div class="col-sm-3">
+                <a href="/Pages/about.html" class="btn btn-lg active" role="button">About</a>
+            </div>
+        </div>
     </div>
-    <h1>Products</h1>
+    <h1 class="barName" style="text-shadow:0px 0px 10px black">Fantastic Burger Bar</h1>
+    <h2 style="text-align: center;"> Products </h2>
 
-    <p>
-        <span class="bold">John Doe.</span><br>
-        He is a extremly spicy burger
-        <img src="/Pictures/csibehusos-hamburger.jpg" alt="csibehúsos">
-    </p>
-    <h3>Images</h3>
-    <div class="img-div">
-        <img id="img1" src="/Pictures/Vegan Mushroom.jfif" alt="Vega Mushroom">
-        <img id="img2" src="/Pictures/Vegan Easy.jfif" alt="Vaga Easy">
-        <img src="/Pictures/Vegan 2.jfif" alt="Vage Oat">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-sm-1"></div>
+            <div class="col-sm8-8">
+            </div>
+            <h2 class="adrs">Meat Burgers: </h2>
+
+            <table class="TabProd table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>Food</th>
+                        <th>Ingredients</th>
+                        <th>Price</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Hamburger 1 </td>
+                        <td>meat, salad, tomato, cucumber, onion, spices,</td>
+                        <td>4 $</td>
+                    </tr>
+                    <tr>
+                        <td>Hamburger 2 <span class="badge badge-secondary">New</span></td>
+                        <td>meat, salad, tomato, cucumber, onion, spices,</td>
+                        <td>4 $</td>
+                    </tr>
+                    <tr>
+                        <td>Hamburger 3 </td>
+                        <td>meat, salad, tomato, cucumber, onion, spices,</td>
+                        <td>4 $</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="col-sm-1"></div>
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <div class="row">
+
+            <div class="col-sm-1"></div>
+            <div class="col-sm8-8">
+            </div>
+            <h2 class="adrs">Vegan Burgers: </h2>
+
+            <table class="TabProd table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>Food</th>
+                        <th>Ingredients</th>
+                        <th>Price</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Hamburger 1 </td>
+                        <td>cheese, salad, tomato, cucumber, onion, spices,</td>
+                        <td>4 $</td>
+                    </tr>
+                    <tr>
+                        <td>Hamburger 2 <span class="badge badge-secondary">New</span></td>
+                        <td>mushroom, salad, tomato, cucumber, onion, spices,</td>
+                        <td>4 $</td>
+                    </tr>
+                    <tr>
+                        <td>Hamburger 3 </td>
+                        <td>oat, salad, tomato, cucumber, onion, spices,</td>
+                        <td>4 $</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="col-sm-1"></div>
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <div class="row">
+
+            <div class="col-sm-1"></div>
+            <div class="col-sm8-8">
+            </div>
+            <h2 class="adrs">Salad: </h2>
+
+            <table class="TabProd table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>Food</th>
+                        <th>Ingredients</th>
+                        <th>Price</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Salad 1 </td>
+                        <td>cheese, salad, tomato, cucumber, onion, spices,</td>
+                        <td>4 $</td>
+                    </tr>
+                    <tr>
+                        <td>Salad 2 <span class="badge badge-secondary">New</span></td>
+                        <td>mushroom, salad, tomato, cucumber, onion, spices,</td>
+                        <td>4 $</td>
+                    </tr>
+                    <tr>
+                        <td>Salat 3 </td>
+                        <td>oat, salad, tomato, cucumber, onion, spices,</td>
+                        <td>4 $</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="col-sm-1"></div>
+        </div>
     </div>
 </body>
 

@@ -7,8 +7,10 @@
 body{
     background-color:#ffd400;
     border-radius: 10px;
+    font-family: 'Dancing Script', cursive;
 }
 .container{}
+
 .btn-lg {
     font-family: 'Dancing Script', cursive;
     font-size: 24px;
@@ -47,5 +49,36 @@ img{
     background-color: #ffc107; 
     border: solid 1px rgba(0,0,0,.125); 
     border-radius: 0.25rem; 
-    
+}   
+
+.TabProd{
+    margin: 15px;
+    background-color: #ffc107; 
+    border: solid 1px rgba(0,0,0,.125); 
+    border-radius: 0.25rem; 
+}       
+}h2{
+    font-family: 'Dancing Script', cursive;
+    text-transform: capitalize;
+    margin: 10px;
 }
+.adrs{
+    background-color: #ffc107; 
+    border: solid 1px rgba(0,0,0,.125); 
+    border-radius: 0.25rem; 
+    padding: 5px;
+    box-shadow: 3px 3px 10px black;
+    min-width: 200px;
+}
+.map-responsive{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
