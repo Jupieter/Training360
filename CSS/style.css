@@ -2,111 +2,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lobster&display=swap');
 
 @font-face{
-    Dancing
+    'Dancing Script', cursive;
 }
 
 body {
     background-color:#ffd400;
 }
 
-.btn-primary {
-    color: #ffee00;
-    background-color: #881000;
-    border-color: #5bc2c2
-}
+.order-form .container {
+    color: #4c4c4c;
+    background-color: #ffc107;
+    padding: 20px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .1);
+  }
 
-.btn-primary:hover {
-    color: #212529;
-    background-color: #52bebe;
-    border-color: #8ad3d3
-}
-
-.btn-primary:focus,
-.btn-primary.focus {
-    box-shadow: 0 0 0 .2rem rgba(91, 194, 194, 0.5)
-}
-.menu  {text-decoration: none; color: #ffee00;
-    background-color: #881000; 
-    border-color: #aa1000; border-style: outset;
-    border-width: 3px; font-size: 24pt;
-    border-radius: 10px;
-    font-weight: bold; font-family: Times Dancing; 
-    margin-top: 5px; margin-right: 5px;
-    margin-bottom: 5px; margin-left: 5px;
-    padding-top: 5px; padding-right: 10px;
-    padding-bottom: 5px; padding-left: 10px}
-}  
-
-
-#navcontainer ul {list-style-type: none; text-align: right;
-    padding: 10px; float: center;font-size: 24px; width: 100%}
- 
-#navcontainer li {display: inline; padding: 5px; }
- 
-#navcontainer a {text-decoration: none; color: #ffee00;
-    background-color: #881000; 
-    border-color: #aa1000; border-style: outset;
-    border-width: 3px; font-size: 24pt;
-    border-radius: 10px;
-    font-weight: bold; font-family: Times Dancing;
-    margin-top: 5px; margin-right: 5px;
-    margin-bottom: 5px; margin-left: 5px;
-    padding-top: 5px; padding-right: 10px;
-    padding-bottom: 5px; padding-left: 10px}
-
-#bioheader{
-    color: purple;
-}
-.comment{
-    color: lightgray;
-    max-width: 75%;
-    
-}
-.bold{
+  .order-form-label {
+    margin: 8px 0 0 0;
+    font-size: 14px;
     font-weight: bold;
-}
-.img-div{
-    background-color: lightskyblue;
-}
+  }
 
-#img2{
-    position: relative;
-}
+  .order-form-input {
+    width: 100%;
+    padding: 8px 8px;
+    border-width: 1px !important;
+    border-style: solid !important;
+    border-radius: 3px !important;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.2em;
+    background-color: #cccccc;
+    border-color: #999999;
+  }
+  
+  .order-form-input:hover {
+    background-color: #eeeeee;
+  }
 
-h1{
-    color: red;
-    font-family: 'Dancing Script', cursive;
-    text-transform: uppercase;
-    margin: 10px;
-    text-shadow: 3px 3px 10px gray;
-}
-
-h2{
-    font-family: 'Dancing Script', cursive;
-    text-transform: capitalize;
-    margin: 10px;
-}
-p{
-    font-family: 'Lobster', cursive;
-    font-size: 24px;
-    color: grey;
-    text-align: justify;
-    font-weight: 300;
-    line-height: initial;
-    margin: 10px 40px;
-    border: solid 5px darkgray;
-    padding: 10px;
-}
-
-li{
-    color: gray;font-size: 24;
-}
-
-img{
-    height:200px;
-    position: right;
-    box-shadow: 3px 3px 10px black;
-    border-radius: 10px;
-    margin: 1%;
-
-}
+  .btn-submit:hover {
+    background-color: #090909 !important;
+  }
