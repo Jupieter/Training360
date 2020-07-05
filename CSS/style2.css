@@ -11,6 +11,19 @@ body{
 }
 .container{}
 
+.widget{
+
+    font-family: 'Dancing Script', cursive;
+    font-size: 14px;
+    color: #ffee00;
+    background-color: #881000;
+    border-color: #ee0000;
+    border-radius: 10px;
+    padding: 32px;
+    margin: 20px;
+    margin-left: 45px;
+}
+
 .btn-lg {
     font-family: 'Dancing Script', cursive;
     font-size: 24px;
