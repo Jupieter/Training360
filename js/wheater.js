@@ -1,15 +1,15 @@
 var temperatures = [-11.2, 9.4, 13.0, 17.0, 21.7, 28.2, 31.1];
 var temperatureUpperLimits = [0, 10, 20, 30, 50];
-var offers = ["Fűtsd fel magad isteni forrócsokinkkal!",
-    "Melegedj egy teával nálunk!",
-    "Egy finom süti biztos jól esne!",
-    "A fagyink lehűt!",
-    "Hűtsd le magad jéghideg kézművesd limonádénkkal!"];
+var offers = ["Warm up with our divine hot chocolate!",
+    "Warm up with a tea with us!",
+    "A delicious cookie would definitely work well!",
+    "Our ice cream make you cool!",
+    "Cool yourself with our ice-cold handcrafted lemonade!"];
 
 function weatherWidget(temper) {
     var day = document.getElementById("day").value
     let temper1 = temper[day]
-    console.log("temper 2 = ", temper1)
+    temper1 = temper1.toFixed(1)
     document.getElementById("temperature").innerHTML = `${temper1}&deg;C`;
     for (let i = 0; i < temperatureUpperLimits.length; i++) {
         var upTemp = temperatureUpperLimits[i];
@@ -67,7 +67,7 @@ let weatherMath = {
 };
 
 function callWeatherMath(temper) {
-      
+
     weatherWidget(temper)
     weatherMath.weatherMin(temper);
     weatherMath.weatherMax(temper);
@@ -80,17 +80,15 @@ callWeatherMath(temperatures)
 
 function radioB() {
     let unitD = document.getElementById("radioC").checked
-    let temper =[0,0]
-    console.log("unitD: ", unitD)
+    let temper = [0, 0]
+    // console.log("unitD: ", unitD)
     if (unitD == false) {
-        console.log("NA")
-
         for (let i = 0; i < temperatures.length; i++) {
             const element = temperatures[i];
-            console.log(i, " ", element)
-            temper[i] = parseInt((temperatures[i] * 1.8 + 32)*10)/10
-            
+            // console.log(i, " ", element)
+            temper[i] = parseInt((temperatures[i] * 1.8 + 32) * 10) / 10
         }
-    }else{temper = temperatures}
-    console.log(temper)
+    } else { temper = temperatures }
+    // console.log(temper)
+    callWeatherMath(temper)
 }
