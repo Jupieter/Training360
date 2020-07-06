@@ -41,12 +41,12 @@
                 <div class="col-sm-2">
                     <div class="form-check">
                         <label class="form-check-label">
-                            <input id="radioC" type="radio" class="form-check-input" name="optradio" value="0" checked>Celsius
+                            <input onclick="radioB()"  id="radioC" type="radio" class="form-check-input" name="optradio" value="0" checked>Celsius
                         </label>
                     </div>
                     <div class="form-check">
                         <label class="form-check-label">
-                            <input id="radioC" type="radio" class="form-check-input" name="optradio" value="1">Fahrenheit
+                            <input id="radioF" type="radio" class="form-check-input" name="optradio" onclick=radioB() value="1">Fahrenheit
                         </label>
                     </div>
                 </div>
@@ -62,11 +62,11 @@
                     <h4 id="minim" style="text-align: left;">minim</h4>
                 </div>
                 <div class="col-sm-4">
-                    <p class="widgeP">average: </p>
+                    <p class="widgeP" style="text-align: center;">average: </p>
                     <h4 id="average" style="text-align: center;">average</h4>
                 </div>
                 <div class="col-sm-4">
-                    <p class="widgeP">maximum: </p>
+                    <p class="widgeP" style="text-align: right;">maximum: </p>
                     <h4 id="maxim" style="text-align: right;">maxim</h4>
                 </div>
             </div>
