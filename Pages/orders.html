@@ -14,24 +14,20 @@
     <div class="container">
         <div class="jumbotron widget">
 
-            
             <div class="row">
                 <div class="col-sm-3">
                     <h2> Időjárás</h2>
                 </div>
                 <div class="col-sm">
-                    <p id="testing1">------------------------------</p>
+                    <p id="testing1"></p>
                 </div>
                 <div class="col-sm-3">
                     <h2 id="temperature" style="text-align: right;">NoN</h2>
                 </div>
             </div>
-    
+
             <div class="row">
-                <div class="col-sm-1">
-                    <label for="sel1">Select a day (select one):</label>
-                </div>
-                <div class="col-sm-2">
+                <div class="col-sm-3">
                     <select class="form-control" id="day" onclick="weatherWidget()">
                         <option value=0>Monday </option>
                         <option value=1>Tuesday </option>
@@ -42,16 +38,41 @@
                         <option value=6>Sunday </option>
                     </select>
                 </div>
-                <div class="col-sm-1">
-                    <p id="testing2">------</p>
+                <div class="col-sm-2">
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input id="radioC" type="radio" class="form-check-input" name="optradio" value="0" checked>Celsius
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input id="radioC" type="radio" class="form-check-input" name="optradio" value="1">Fahrenheit
+                        </label>
+                    </div>
                 </div>
                 <div class="col-sm">
                     <h3 id="offers" style="text-align: right;">offer</h3>
                 </div>
             </div>
-            
+            <br>
+
+            <div class="row">
+                <div class="col-sm-4">
+                    <p class="widgeP">minimum: </p>
+                    <h4 id="minim" style="text-align: left;">minim</h4>
+                </div>
+                <div class="col-sm-4">
+                    <p class="widgeP">average: </p>
+                    <h4 id="average" style="text-align: center;">average</h4>
+                </div>
+                <div class="col-sm-4">
+                    <p class="widgeP">maximum: </p>
+                    <h4 id="maxim" style="text-align: right;">maxim</h4>
+                </div>
+            </div>
+
         </div>
-        </div>
+    </div>
 
     <div class="container">
         <div class="row">
