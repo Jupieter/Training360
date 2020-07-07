@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Admin</title>
+    <link rel="stylesheet" href="/lib/bootstrap-4.5.0-dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Admin Table Input</h2>
+        <form>
+            <div class="form-row">
+                <div class="col">
+                    <label for="firstName">First name:</label>
+                    <input type="text" class="form-control" placeholder="First name">
+                </div>
+                <div class="col">
+                    <label for="firstName">Last name</label>
+                    <input type="text" class="form-control" placeholder="Last name">
+                </div>
+            </div>
+            <br>
+
+            <div class="form-row">
+                <div class="col">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                </div>
+                <div class="col">
+                    <label for="pwd">Password:</label>
+                    <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+                </div>
+            </div>
+            <br>
+            <div class="form-row">
+                <div class="col-10"></div>
+                <div class="col-1">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <table id="myTable" class="table">
+        <thead class="thead-dark table-striped">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Email</th>
+                <th scope="col">Password</th>
+            </tr>
+        </thead>
+
+        <tbody id="myBody">
+
+        </tbody>
+    </table>
+</body>
+
+</html>
