@@ -12,7 +12,7 @@
 <body>
     <div class="container">
         <h2>Admin Table Input</h2>
-        <form>
+        <form id="usersForm">
             <div class="form-row">
                 <div class="col">
                     <label for="firstName">First name:</label>
@@ -39,12 +39,12 @@
             <div class="form-row">
                 <div class="col-10"></div>
                 <div class="col-1">
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="button" class="btn btn-primary" onclick="readForm()">Submit</button>
                 </div>
             </div>
         </form>
     </div>
-
+    <br>
     <table id="userTable" class="table table-striped">
         <thead class="thead-dark ">
             <tr>
