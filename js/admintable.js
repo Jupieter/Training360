@@ -25,14 +25,15 @@ let createButtonGrooup = (parent, k) => {
     let btnDanger = document.createElement("button");
     btnDanger.className = "btn-danger btn";
     btnDanger.value = k;
-    btnDanger.onclick = "deleteRow(this)";
     btnDanger.innerHTML = '<i class="fas fa-trash-alt"></i>';
     group.appendChild(btnInfo);
     group.appendChild(btnDanger);
-
+    
     let td = document.createElement("td");
-    td.appendChild(group);
     parent.appendChild(td);
+    td.appendChild(group);
+
+    btnDanger.addEventListener("click", deleteRow);
 }
 
 let readForm = () => {
@@ -87,11 +88,18 @@ let readForm = () => {
     createAllRow()
 
 };
-function deleteRow(r) {
-    var i = r.parentNode.parentNode.rowIndex;
+function deleteRow() {
+    var actualRow = this.parentNode.parentNode.parentNode
+    var i = actualRow.rowIndex - 1;
+    console.log("Delete");
     console.log(i);
-    // tableBody.deleteRow(i);
-}
+    if (confirm("Are you sure? Can it delete?")) {
+        actualRow.style.backgroundColor = "#ee9090";
+        tableBody.deleteRow(i);
+    } else {
+        actualRow.style.backgroundColor = "";
+    }
+};
 
 let createAllRow = () => {
     for (let k in users) {
@@ -101,6 +109,6 @@ let createAllRow = () => {
         }
         createButtonGrooup(tr, k)
         tableBody.appendChild(tr);
-    }
-}
+    };
+};
 createAllRow()
