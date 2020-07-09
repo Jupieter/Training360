@@ -92,7 +92,7 @@ let readForm = () => {
 function deleteRow() {
     var actualRow = this.parentNode.parentNode.parentNode
     var i = actualRow.rowIndex - 1;
-
+    
     console.log("Delete");
     console.log(i);
     if (confirm("Are you sure? Can it delete?")) {
@@ -101,6 +101,12 @@ function deleteRow() {
         users.splice(i,1)
     };
 };
+function loadForm() {
+    var actualRow = this
+    // var i = actualRow.rowIndex - 1;
+    console.log(actualRow);
+    
+}
 
 function refreshRow() {
     var actualRow = this.parentNode.parentNode.parentNode
@@ -118,6 +124,7 @@ let createAllRow = () => {
         }
         createButtonGrooup(tr, k)
         tableBody.appendChild(tr);
+        this.addEventListener("click", loadForm)
     };
 };
 createAllRow()
