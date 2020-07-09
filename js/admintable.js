@@ -8,6 +8,7 @@ let users = [
 ];
 
 let tableBody = document.querySelector("#userTable tbody");
+
 let createTD = (html, parent) => {
     let td = document.createElement("td");
     td.innerHTML = html;
@@ -33,6 +34,7 @@ let createButtonGrooup = (parent, k) => {
     parent.appendChild(td);
     td.appendChild(group);
 
+    btnInfo.addEventListener("click", refreshRow);
     btnDanger.addEventListener("click", deleteRow);
 }
 
@@ -84,24 +86,31 @@ let readForm = () => {
     console.log("Akku", akku, "Next", nextIndex,);
     console.log("Users", users[nextIndex - 1]);
 
-    tableBody.innerHTML = ""
     createAllRow()
-
+    
 };
 function deleteRow() {
     var actualRow = this.parentNode.parentNode.parentNode
     var i = actualRow.rowIndex - 1;
+
     console.log("Delete");
     console.log(i);
     if (confirm("Are you sure? Can it delete?")) {
-        actualRow.style.backgroundColor = "#ee9090";
+        // actualRow.style.backgroundColor = "#ee9090";
         tableBody.deleteRow(i);
-    } else {
-        actualRow.style.backgroundColor = "";
-    }
+        users.splice(i,1)
+    };
 };
 
+function refreshRow() {
+    var actualRow = this.parentNode.parentNode.parentNode
+    var i = actualRow.rowIndex - 1;
+    console.log("Refresh");
+    console.log(i);
+}
+
 let createAllRow = () => {
+    tableBody.innerHTML = ""
     for (let k in users) {
         let tr = document.createElement("tr");
         for (let value of Object.values(users[k])) {
