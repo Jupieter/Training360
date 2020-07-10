@@ -1,4 +1,5 @@
 let users = [
+    { index: 0, firstname: "Jung", lastname: "Péter", email: "jp@gmail.com", passw: "az" },
     { index: 1, firstname: "Piros", lastname: "Andras", email: "pa@gmail.com", passw: "1" },
     { index: 2, firstname: "Sárga", lastname: "Béla", email: "sb@gmail.com", passw: "2" },
     { index: 3, firstname: "Zöld", lastname: "Cili", email: "zc@gmail.com", passw: "3" },
@@ -8,6 +9,7 @@ let users = [
 ];
 let validCheck = false
 let tableBody = document.querySelector("#userTable tbody");
+var inputS = document.querySelectorAll("#usersForm input");
 
 let createTD = (html, parent) => {
     let td = document.createElement("td");
@@ -37,6 +39,11 @@ let createButtonGrooup = (parent, k) => {
     btnInfo.addEventListener("click", refreshRow);
     btnDanger.addEventListener("click", deleteRow);
 };
+let clearForm = () => {
+    for (let i = 0; i < 4; i++) {
+        inputS[i].value = "";
+    };
+};
 
 function validation() {
     validCheck = false
@@ -54,7 +61,7 @@ function validation() {
             let serpent = false;
             let dot = false;
             for (j of element) {
-                console.log("emil", j);
+                // console.log("emil", j);
                 if (j == "@") { serpent = true }
                 if (j == ".") { dot = true }
             }
@@ -67,41 +74,19 @@ function validation() {
         validCheck = true
     };
 };
-
+// input users from Form to Array & Table
 let readForm = () => {
     validation()
     if (validCheck == true) {
-        var inputS = document.querySelectorAll("#usersForm input");
-        for (let i = 0; i < inputS.length; i++) {
-            const element = inputS[i].value;
-            console.log(element);
-            /* if (element == "") {
-                alert("All fields are required!");
-                break;
-            };
-            //email validation
-            if (i == 2) {
-                let serpent = false;
-                let dot = false;
-                for (j of element) {
-                    console.log("emil", j);
-                    if (j == "@") { serpent = true }
-                    if (j == ".") { dot = true }
-                }
-                if (serpent != true || dot != true) {
-                    alert("Not valid email adress!");
-                    break;
-                }
-            } */
-        }
+
         var nextIndex = 0;
         for (let j = 0; j < users.length; j++) {
             const userIndex = users[j].index;
             if (userIndex > nextIndex) {
                 nextIndex = userIndex;
-            }
-            nextIndex += 1
-            console.log(userIndex);
+            };
+            nextIndex += 1;
+            // console.log(userIndex);
         };
 
         var akku = {
@@ -110,14 +95,12 @@ let readForm = () => {
             lastname: inputS[1].value,
             email: inputS[2].value,
             passw: inputS[3].value,
-        }
+        };
         users.push(akku);
-
-
         console.log("Akku", akku, "Next", nextIndex,);
-        console.log("Users", users[nextIndex - 1]);
-        createAllRow()
-    } 
+        // console.log("Users", users[nextIndex]);
+        createAllRow();
+    };
 };
 
 function deleteRow() {
@@ -134,24 +117,40 @@ function deleteRow() {
 };
 function loadForm() {
     var actualRow = this;
-    var actualRowIndex = actualRow.rowIndex
-    /* var indeX = actualRow.childNodes;
-    var arrayNum = (indeX[0].childNodes[0]);
-    arrayNum.trim();
-    arrayNum = Number(arrayNum)  ; */
-    let firstName = users[actualRowIndex].firstname;
-    let lastName = users[actualRowIndex].lastname;
-    let email = users[actualRowIndex].email;
-
-    console.log(actualRowIndex, " names", firstName, lastName);
-
+    var actualRowIndex = actualRow.rowIndex - 1
+    if (actualRowIndex > -1) {
+        /* var indeX = actualRow.childNodes;
+        var arrayNum = (indeX[0].childNodes[0]);
+        arrayNum.trim();
+        arrayNum = Number(arrayNum)  ; */
+        console.log("load index: ", actualRowIndex);  
+        var userData = []
+        userData[1] = users[actualRowIndex].firstname;
+        userData[2] = users[actualRowIndex].lastname;
+        userData[3] = users[actualRowIndex].email;
+        userData[4] = users[actualRowIndex].passw;
+    
+        for (let i = 1; i < 5; i++) {
+            inputS[i - 1].value = userData[i]
+        };
+    }
 }
 
 function refreshRow() {
     var actualRow = this.parentNode.parentNode.parentNode
-    var i = actualRow.rowIndex - 1;
+    var index = actualRow.rowIndex - 1;
+
+    var akku2 = {
+        index: index,
+        firstname: inputS[0].value,
+        lastname: inputS[1].value,
+        email: inputS[2].value,
+        passw: inputS[3].value,
+    };
     console.log("Refresh");
-    console.log(i);
+    console.log(index, akku2);
+    users[index] = akku2;
+    createAllRow ()
 }
 
 let createAllRow = () => {
