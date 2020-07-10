@@ -97,7 +97,7 @@ let readForm = () => {
             passw: inputS[3].value,
         };
         users.push(akku);
-        console.log("Akku", akku, "Next", nextIndex,);
+        // console.log("Akku", akku, "Next", nextIndex,);
         // console.log("Users", users[nextIndex]);
         createAllRow();
     };
@@ -107,8 +107,8 @@ function deleteRow() {
     var actualRow = this.parentNode.parentNode.parentNode
     var i = actualRow.rowIndex - 1;
 
-    console.log("Delete");
-    console.log(i);
+    // console.log("Delete");
+    // console.log(i);
     if (confirm("Are you sure? Can it delete?")) {
         // actualRow.style.backgroundColor = "#ee9090";
         tableBody.deleteRow(i);
@@ -123,7 +123,7 @@ function loadForm() {
         var arrayNum = (indeX[0].childNodes[0]);
         arrayNum.trim();
         arrayNum = Number(arrayNum)  ; */
-        console.log("load index: ", actualRowIndex);  
+        // console.log("load index: ", actualRowIndex);  
         var userData = []
         userData[1] = users[actualRowIndex].firstname;
         userData[2] = users[actualRowIndex].lastname;
@@ -147,9 +147,11 @@ function refreshRow() {
         email: inputS[2].value,
         passw: inputS[3].value,
     };
-    console.log("Refresh");
-    console.log(index, akku2);
-    users[index] = akku2;
+    // console.log("Refresh");
+    // console.log(index, akku2);
+    if (confirm("Are you sure? Can it refresh?")) {
+        users[index] = akku2;
+    };
     createAllRow ()
 }
 
