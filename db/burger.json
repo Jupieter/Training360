@@ -17,8 +17,7 @@
             "foodname" : "Hamburger 0",
             "action" : "New",
             "ingredients" : "meat, salad, tomato, cucumber, onion, spices,",
-            "price": 4,
-            "buttons":
+            "price": 4
         },
         {
             "id" : 1,
