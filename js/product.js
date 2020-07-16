@@ -120,10 +120,10 @@ function fillDataTable(data,) {
         if (row.active) {
             let bodyIndex = row.foodType
             console.log(bodyIndex);
-            
+
             let tr = createAnyElement("tr");
             let divRD = createAnyElement("div", { class: "row" });
-            for (let k = 3; k < keys.length-1; k++) {
+            for (let k = 3; k < keys.length - 1; k++) {
                 switch (k) {
                     case 3:
                         attributes = { class: "col-sm-2" };
@@ -153,14 +153,14 @@ function fillDataTable(data,) {
                 };
                 let divD = createAnyElement("div", attributes);
                 // console.log("divD: ", divD, "element: ",td)
-                
+
                 divD.appendChild(td);
                 //tr.appendChild(divD);
                 divRD.appendChild(divD);
                 // console.log("divR: ", divRD, "element: ",divD)
             }
 
-            let btnGroup = createeBtnGroup(dataId);  
+            let btnGroup = createeBtnGroup(dataId);
             divRD.appendChild(btnGroup);
             tBody[bodyIndex].appendChild(divRD);
         }
@@ -168,58 +168,62 @@ function fillDataTable(data,) {
 }
 
 function createeBtnGroup(dataId) {
-    let group1 = createAnyElement("div", { 
+    let group1 = createAnyElement("div", {
         class: "btn btn-group",
         style: "margin: 0px; padding: 0px",
     });
     group1.innerHTML = "";
     console.log(group1);
-    let group2 = createAnyElement("div", { 
+    let group2 = createAnyElement("div", {
         class: "btn btn-group",
         style: "margin: 0px; padding: 0px",
     });
     group2.innerHTML = "";
 
-    let minusBtn = createAnyElement("button", { 
+    let minusBtn = createAnyElement("button", {
         class: "input-group-btn btn btn-default btn-number",
-        datatype: "minus", 
-        onclick: "setRow(this)", 
-        style: "margin: 0px" });
+        datatype: "minus",
+        onclick: "setRow(this)",
+        style: "margin: 0px"
+    });
     minusBtn.innerHTML = '<i class="far fa-minus-square"></i>';
 
     let input = createAnyElement("input", {
         class: "form-control",
-        maxlength:"2",
+        maxlength: "2",
         size: 4,
         value: 0,
         name: dataId
     });
-    
-    let plusBtn = createAnyElement("button", { 
-        class: "input-group-btn btn btn-default btn-number", 
-        datatype: "plus", 
-        onclick: "setRow(this)", 
-        style: "margin: 0px" });
-    minusBtn.innerHTML = '<i class="far fa-plus-square"></i>';
 
-    let infoBtn = createAnyElement("button", { 
-        class: "btn btn-success", 
-        onclick: "setRow(this)", 
-        style: "margin: 0px" });
+    let plusBtn = createAnyElement("button", {
+        class: "input-group-btn btn btn-default btn-number",
+        datatype: "plus",
+        onclick: "setRow(this)",
+        style: "margin: 0px"
+    });
+    plusBtn.innerHTML = '<i class="far fa-plus-square"></i>';
+
+    let infoBtn = createAnyElement("button", {
+        class: "btn btn-success",
+        onclick: "setRow(this)",
+        style: "margin: 0px"
+    });
     infoBtn.innerHTML = '<i class="fas fa-shopping-basket"></i>';
-    
-    let delBtn = createAnyElement("button", { 
-        class: "btn btn-danger", 
-        onclick: "delRow(this)" , 
-        style: "margin: 0px"});
+
+    let delBtn = createAnyElement("button", {
+        class: "btn btn-danger",
+        onclick: "delRow(this)",
+        style: "margin: 0px"
+    });
     delBtn.innerHTML = '<i class="fas fa-trash-alt"></i>';
-    
+
     group1.appendChild(minusBtn);
     group1.appendChild(input);
     group1.appendChild(plusBtn);
     group2.appendChild(infoBtn);
     group2.appendChild(delBtn);
-    
+
     let td = createAnyElement("td");
     td.appendChild(group1)
     td.appendChild(group2)
