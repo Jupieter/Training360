@@ -42,27 +42,31 @@ function createTableHeader(keys, tableID) {
 
     let tHead = createAnyElement("thead");
     let tBody = createAnyElement("tbody");
-    let tr = createAnyElement("tr" );
-    let divR = createAnyElement("div", {class: "row"} );
+    let tr = createAnyElement("tr");
+    let divR = createAnyElement("div", { class: "row" });
 
+    console.log("keys-length: ", keys.length);
     for (let k = 3; k < keys.length; k++) {
-        switch (k){
+        switch (k) {
             case 3:
-                attributes = {class: "col-sm-2"};
-                break
+                attributes = { class: "col-sm-2" };
+                break;
             case 4:
-                attributes = {class: "col-sm-1"};
-                break
+                attributes = { class: "col-sm-1" };
+                break;
             case 5:
-                attributes = {class: "col-sm-3"};
-                break
+                attributes = { class: "col-sm-4" };
+                break;
             case 6:
-                attributes = {class: "col-sm-1"};
-                break
+                attributes = { class: "col-sm-1" };
+                break;
+            case 7:
+                attributes = { class: "col-sm-3" };
+                break;
         }
         let th = createAnyElement("th");
         th.innerHTML = keys[k] + ": ";
-        let divH = createAnyElement("div", attributes );
+        let divH = createAnyElement("div", attributes);
         // th.setAttribute("style:", "color: #ff0000");
         divH.appendChild(th);
         //  tr.appendChild(divH);
@@ -73,86 +77,141 @@ function createTableHeader(keys, tableID) {
     table.appendChild(tBody);
 }
 
-// Create ALL
+// Create Head & Body
 function craeteAllTable(data) {
     keys = Object.keys(data[0]);
+    keys.push("buttons");
+    // console.log("keys: ", keys);
     for (let i = 0; i < tableId.length; i++) {
         createTableHeader(keys, tableId[i]);
     }
 
     fillDataTable(data);
-    
-    console.log("keys: ",keys);
+
 }
 
 // Fill table with server data
-function fillDataTable(data, ) {
+function fillDataTable(data,) {
     let table = []; let tBody = [];
-    let attributes ={};
+    let attributes = {};
     for (let i = 0; i < tableId.length; i++) {
         let tableID = tableId[i];
-        console.log(tableID);
+        // console.log(tableID);
         table[i] = document.querySelector(`#${tableID}`);
         if (!table) {
             console.error('Table is not found')
             return;
         }
         tBody[i] = table[i].querySelector("tBody"); // console.log(tBody);
-        tBody[i] .innerHTML = "";
+        tBody[i].innerHTML = "";
     }
-    for (let j = 0; j < 5; j++) {
-        console.log("table: ", table[j], "body: ", tBody[j] );
-               
-    }
+    /* for (let j = 0; j < 5; j++) {
+        console.log("table: ", table[j], "body: ", tBody[j]);
+
+    } */
 
     let tr = createAnyElement("tr");
 
     for (let row of data) {
         // console.log("row: ", row);
         // console.log(row.foodType);
-                
+
         if (row.active) {
             let bodyIndex = row.foodType
             console.log(bodyIndex);
-
+            
             let tr = createAnyElement("tr");
-            for (let k = 3; k < keys.length; k++) {
-                switch (k){
+            let divRD = createAnyElement("div", { class: "row" });
+            for (let k = 3; k < keys.length-1; k++) {
+                switch (k) {
                     case 3:
-                        attributes = {class: "col-sm-2"};
-                        break
+                        attributes = { class: "col-sm-2" };
+                        break;
                     case 4:
-                        attributes = {class: "col-sm-1"};
-                        break
+                        attributes = { class: "col-sm-1" };
+                        break;
                     case 5:
-                        attributes = {class: "col-sm-3"};
-                        break
+                        attributes = { class: "col-sm-4" };
+                        break;
                     case 6:
-                        attributes = {class: "col-sm-1"};
-                        break
+                        attributes = { class: "col-sm-1" };
+                        break;
+                    case 7:
+                        attributes = { class: "col-sm-3" };
+                        break;
                 }
                 let element = row[keys[k]];
-                let td = createAnyElement("td")
+                let td = createAnyElement("td",)
                 td.innerHTML = element;
-                
+
                 if (keys[k] == "foodname") {
-                    td.setAttribute("style", "text-size: 18px" );
+                    td.setAttribute("style", "text-size: 24px; bold;");
                 };
                 if (keys[k] == "action" && element != "") {
-                    td.setAttribute("class", "badge badge-secondary" );
+                    td.setAttribute("class", "badge badge-secondary");
                 };
-                let divD = createAnyElement("div", attributes)
-
+                let divD = createAnyElement("div", attributes);
+                // console.log("divD: ", divD, "element: ",td)
+                
                 divD.appendChild(td);
-                tr.appendChild(divD);
+                //tr.appendChild(divD);
+                divRD.appendChild(divD);
+                // console.log("divR: ", divRD, "element: ",divD)
             }
-            let divR = createAnyElement("div", {class: "row"})
-            divR.appendChild(divD);
 
-            // let btnGroup = createeBtnGroup();   // console.log(tr);
-            // tr.appendChild(btnGroup);
-            tBody[bodyIndex].appendChild(divR);
+            let btnGroup = createeBtnGroup();   // console.log(tr);
+            divRD.appendChild(btnGroup);
+            tBody[bodyIndex].appendChild(divRD);
         }
     }
+    function createeBtnGroup() {
+        let group = createAnyElement("div", { 
+            class: "btn btn-group",
+            style: "margin: 0px; padding: 0px",
+         });
 
+
+        let infoBtn = createAnyElement("button", { 
+            class: "btn btn-success", 
+            onclick: "setRow(this)", 
+            style: "margin: 0px" });
+        infoBtn.innerHTML = '<i class="fas fa-sync-alt"></i>';
+        
+        let delBtn = createAnyElement("button", { 
+            class: "btn btn-danger", 
+            onclick: "delRow(this)" , 
+            style: "margin: 0px"});
+        delBtn.innerHTML = '<i class="fas fa-trash-alt"></i>';
+        
+        group.appendChild(infoBtn);
+        group.appendChild(delBtn);
+        
+        let td = createAnyElement("td");
+        td.appendChild(group)
+        return td;
+    }
+}
+function createeBtnGroup() {
+    let group = createAnyElement("div", { 
+        class: "btn btn-group",
+        style: "margin: 0px; padding: 0px",
+     });
+    let infoBtn = createAnyElement("button", { 
+        class: "btn btn-success", 
+        onclick: "setRow(this)", 
+        style: "margin: 0px" });
+    infoBtn.innerHTML = '<i class="fas fa-sync-alt"></i>';
+    
+    let delBtn = createAnyElement("button", { 
+        class: "btn btn-danger", 
+        onclick: "delRow(this)" , 
+        style: "margin: 0px"});
+    delBtn.innerHTML = '<i class="fas fa-trash-alt"></i>';
+    
+    group.appendChild(infoBtn);
+    group.appendChild(delBtn);
+    
+    let td = createAnyElement("td");
+    td.appendChild(group)
+    return td;
 }

@@ -6,7 +6,8 @@
         "action", 
         "foodname", 
         "ingredients", 
-        "price"],
+        "price",
+        "buttons"],
 
     "foods" : [
         {
@@ -16,7 +17,8 @@
             "foodname" : "Hamburger 0",
             "action" : "New",
             "ingredients" : "meat, salad, tomato, cucumber, onion, spices,",
-            "price": 4
+            "price": 4,
+            "buttons":
         },
         {
             "id" : 1,
