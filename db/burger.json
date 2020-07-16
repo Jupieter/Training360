@@ -1,0 +1,44 @@
+{
+    "foodTypes": ["Meat", "Vegan", "Salads", "Drink"],
+    "keys" : [ "id", "foodType", "active", "action", "foodName", "ingredients", "price"],
+
+    "foods" : [
+        {
+            "id" : 0,
+            "active" : true,
+            "foodType" : "0",
+            "foodName" : "Hamburger 1",
+            "action" : "New",
+            "ingredients" : "meat, salad, tomato, cucumber, onion, spices,",
+            "price": 4
+        },
+        {
+            "id" : 2,
+            "active" : true,
+            "foodType" : "0",
+            "foodName" : "Hamburger 2",
+            "action" : "New",
+            "ingredients" : "meat, salad, tomato, cucumber, onion, spices,",
+            "price": 4
+        },
+        {
+            "id" : 3,
+            "active" : true,
+            "foodType" : "0",
+            "foodName" : "Hamburger 3",
+            "action" : "New",
+            "ingredients" : "meat, salad, tomato, cucumber, onion, spices,",
+            "price": 4
+        },
+        {
+            "id" : 4,
+            "active" : true,
+            "foodType" : "0",
+            "foodName" : "Hamburger 4",
+            "action" : "New",
+            "ingredients" : "meat, salad, tomato, cucumber, onion, spices,",
+            "price": 4
+        }
+    ]
+
+}
