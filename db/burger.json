@@ -12,7 +12,7 @@
         {
             "id" : 0,
             "active" : true,
-            "foodType" : "0",
+            "foodType" : 0,
             "foodname" : "Hamburger 0",
             "action" : "New",
             "ingredients" : "meat, salad, tomato, cucumber, onion, spices,",
@@ -21,7 +21,7 @@
         {
             "id" : 1,
             "active" : false,
-            "foodType" : "0",
+            "foodType" : 0,
             "foodname" : "Hamburger 1",
             "action" : "New",
             "ingredients" : "meat, salad, tomato, cucumber, onion, spices,",
@@ -30,7 +30,7 @@
         {
             "id" : 2,
             "active" : true,
-            "foodType" : "0",
+            "foodType" : 0,
             "foodname" : "Hamburger 2",
             "action" : "",
             "ingredients" : "meat, salad, tomato, cucumber, onion, spices,",
@@ -39,7 +39,7 @@
         {
             "id" : 3,
             "active" : true,
-            "foodType" : "0",
+            "foodType" : 0,
             "foodname" : "Hamburger 3",
             "action" : "",
             "ingredients" : "meat, salad, tomato, cucumber, onion, spices,",
@@ -48,12 +48,50 @@
         {
             "id" : 4,
             "active" : true,
-            "foodType" : "0",
+            "foodType" : 0,
             "foodname" : "Hamburger 4",
             "action" : "Action",
             "ingredients" : "meat, salad, tomato, cucumber, onion, spices,",
             "price": 4
+        },
+        {
+            "id" : 5,
+            "active" : true,
+            "foodType" : 1,
+            "foodname" : "Hamburger V1",
+            "action" : "Action",
+            "ingredients" : "cheese, salad, tomato, cucumber, onion, spices,",
+            "price": 4
+        },
+        {
+            "id" : 6,
+            "active" : true,
+            "foodType" : 1,
+            "foodname" : "Hamburger V2",
+            "action" : "",
+            "ingredients" : "cheese, salad, tomato, cucumber, onion, spices,",
+            "price": 4
+        },
+        {
+            "id" : 7,
+            "active" : true,
+            "foodType" : 1,
+            "foodname" : "Hamburger V3",
+            "action" : "",
+            "ingredients" : "cheese, salad, tomato, cucumber, onion, spices,",
+            "price": 4
+        },
+        {
+            "id" : 8,
+            "active" : true,
+            "foodType" : 2,
+            "foodname" : "Salad 1",
+            "action" : "",
+            "ingredients" : "ice-salad",
+            "price": 4
         }
+    ],
+    "comments": [
+        { "id": 1, "body": "some comment", "postId": 1 }
     ]
-
 }
