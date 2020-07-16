@@ -4,7 +4,7 @@
         "active", 
         "foodType",  
         "action", 
-        "foodName", 
+        "foodname", 
         "ingredients", 
         "price"],
 
@@ -13,16 +13,16 @@
             "id" : 0,
             "active" : true,
             "foodType" : "0",
-            "foodName" : "Hamburger 0",
+            "foodname" : "Hamburger 0",
             "action" : "New",
             "ingredients" : "meat, salad, tomato, cucumber, onion, spices,",
             "price": 4
         },
         {
             "id" : 1,
-            "active" : true,
+            "active" : false,
             "foodType" : "0",
-            "foodName" : "Hamburger 1",
+            "foodname" : "Hamburger 1",
             "action" : "New",
             "ingredients" : "meat, salad, tomato, cucumber, onion, spices,",
             "price": 4
@@ -31,7 +31,7 @@
             "id" : 2,
             "active" : true,
             "foodType" : "0",
-            "foodName" : "Hamburger 2",
+            "foodname" : "Hamburger 2",
             "action" : "",
             "ingredients" : "meat, salad, tomato, cucumber, onion, spices,",
             "price": 4
@@ -40,7 +40,7 @@
             "id" : 3,
             "active" : true,
             "foodType" : "0",
-            "foodName" : "Hamburger 3",
+            "foodname" : "Hamburger 3",
             "action" : "",
             "ingredients" : "meat, salad, tomato, cucumber, onion, spices,",
             "price": 4
@@ -49,7 +49,7 @@
             "id" : 4,
             "active" : true,
             "foodType" : "0",
-            "foodName" : "Hamburger 4",
+            "foodname" : "Hamburger 4",
             "action" : "Action",
             "ingredients" : "meat, salad, tomato, cucumber, onion, spices,",
             "price": 4

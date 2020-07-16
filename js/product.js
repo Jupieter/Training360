@@ -24,8 +24,8 @@ function getServerData(url) {
         err => console.error(err)
     );
 }
-getServerData(serverUrl2).then(
-    data => craeteAllTableHeader(data),
+getServerData(serverUrl3).then(
+    data => craeteAllTable(data),
     err => console.error(err)
 );
 
@@ -53,52 +53,67 @@ function createTableHeader(keys, tableID) {
     table.appendChild(tHead);
     table.appendChild(tBody);
 }
-function craeteAllTableHeader(keys) {
+
+// Create ALL
+function craeteAllTable(data) {
+    keys = Object.keys(data[0]);
     for (let i = 0; i < tableId.length; i++) {
         createTableHeader(keys, tableId[i]);
     }
 
+    fillDataTable(data);
+    
+    console.log("keys: ",keys);
 }
 
 // Fill table with server data
-function fillDataTable(data, tableID) {
-    let table = document.querySelector(`#${tableID}`);
-    if (!table) {
-        console.error('Table is not found')
-        return;
+function fillDataTable(data, ) {
+    let table = []; let tBody = [];
+    for (let i = 0; i < tableId.length; i++) {
+        let tableID = tableId[i];
+        console.log(tableID);
+        table[i] = document.querySelector(`#${tableID}`);
+        if (!table) {
+            console.error('Table is not found')
+            return;
+        }
+        tBody[i] = table[i].querySelector("tBody"); // console.log(tBody);
+        tBody[i] .innerHTML = "";
     }
-    let tBody = table.querySelector("tBody"); // console.log(tBody);
-    tBody.innerHTML = "";
+    for (let j = 0; j < 5; j++) {
+        console.log("table: ", table[j], "body: ", tBody[j] );
+               
+    }
 
     let tr = createAnyElement("tr");
-    let szar = data[0].active;
-    console.log(szar);
-    if (data.active) {
 
-        for (let row of data) {
-            console.log(row);
+    for (let row of data) {
+        console.log("row: ", row);
+        console.log(row.foodType);
+                
+        if (row.active) {
+            let bodyIndex = row.foodType
+            console.log(bodyIndex);
+
             let tr = createAnyElement("tr");
-            for (let k of keys) {
+            for (let k = 3; k < keys.length; k++) {
+                let element = row[keys[k]];
                 let td = createAnyElement("td")
-                let input = createAnyElement("input", {
-                    class: "form-control",
-                    value: row[k],
-                    name: k
-                });
-                if (k == "id") {
-                    input.setAttribute("readonly", true);
-                }
-                td.appendChild(input)
+                td.innerHTML = row[keys[k]];
+
+                if (keys[k] == "foodname") {
+                    td.setAttribute("style", "text-size: 18px" );
+                };
+                if (keys[k] == "action" && element != "") {
+                    td.setAttribute("class", "badge badge-secondary" );
+                };
+
                 tr.appendChild(td);
             }
-            let btnGroup = createeBtnGroup();   // console.log(tr);
-            tr.appendChild(btnGroup);
-            tBody.appendChild(tr);
+            // let btnGroup = createeBtnGroup();   // console.log(tr);
+            // tr.appendChild(btnGroup);
+            tBody[bodyIndex].appendChild(tr);
         }
     }
 
 }
-getServerData(serverUrl3).then(
-    data => fillDataTable(data, "Food1"),
-    err => console.error(err)
-);
