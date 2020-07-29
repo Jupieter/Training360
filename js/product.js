@@ -115,11 +115,11 @@ function fillDataTable(data,) {
     for (let row of data) {
         let dataId = row.id
         // console.log("row: ", row);
-        console.log("Id: ", dataId);
+        // console.log("Id: ", dataId);
 
         if (row.active) {
             let bodyIndex = row.foodType
-            console.log(bodyIndex);
+            //console.log(bodyIndex);
 
             let tr = createAnyElement("tr");
             let divRD = createAnyElement("div", { class: "row" });
@@ -160,20 +160,20 @@ function fillDataTable(data,) {
                 // console.log("divR: ", divRD, "element: ",divD)
             }
 
-            let btnGroup = createeBtnGroup(dataId);
+            let btnGroup = createBtnGroup(dataId);
             divRD.appendChild(btnGroup);
             tBody[bodyIndex].appendChild(divRD);
         }
     }
 }
 
-function createeBtnGroup(dataId) {
+function createBtnGroup(dataId) {
     let group1 = createAnyElement("div", {
         class: "btn btn-group",
         style: "margin: 0px; padding: 0px",
     });
     group1.innerHTML = "";
-    console.log(group1);
+    //console.log(group1);
     let group2 = createAnyElement("div", {
         class: "btn btn-group",
         style: "margin: 0px; padding: 0px",
@@ -181,6 +181,7 @@ function createeBtnGroup(dataId) {
     group2.innerHTML = "";
 
     let minusBtn = createAnyElement("button", {
+        id: dataId,
         class: "input-group-btn btn btn-default btn-number",
         datatype: "minus",
         onclick: "setRow(this)",
@@ -189,35 +190,40 @@ function createeBtnGroup(dataId) {
     minusBtn.innerHTML = '<i class="far fa-minus-square"></i>';
 
     let input = createAnyElement("input", {
+        id: dataId,
         class: "form-control",
         maxlength: "2",
         size: 4,
         value: 0,
-        name: dataId
+        name: dataId,
     });
-
+    
     let plusBtn = createAnyElement("button", {
+        id: dataId,
         class: "input-group-btn btn btn-default btn-number",
         datatype: "plus",
-        onclick: "setRow(this)",
+        onclick: "addPlusToInput(this)",
         style: "margin: 0px"
     });
     plusBtn.innerHTML = '<i class="far fa-plus-square"></i>';
-
+    // plusBtn.addEventListener("click", addPlusToInput);
+    
     let infoBtn = createAnyElement("button", {
+        id: dataId,
         class: "btn btn-success",
         onclick: "setRow(this)",
         style: "margin: 0px"
     });
     infoBtn.innerHTML = '<i class="fas fa-shopping-basket"></i>';
-
+    
     let delBtn = createAnyElement("button", {
+        id: dataId,
         class: "btn btn-danger",
         onclick: "delRow(this)",
         style: "margin: 0px"
     });
     delBtn.innerHTML = '<i class="fas fa-trash-alt"></i>';
-
+    
     group1.appendChild(minusBtn);
     group1.appendChild(input);
     group1.appendChild(plusBtn);
@@ -227,6 +233,12 @@ function createeBtnGroup(dataId) {
     let td = createAnyElement("td");
     td.appendChild(group1)
     td.appendChild(group2)
-    console.log(td);
+    //console.log(td);
     return td;
+}
+function addPlusToInput(btn){
+    let btnId = btn.id;
+    let inputs = document.querySelector("input",#${btnId});
+    let inputVal = inputs.value 
+    console.log("hozzáad: ", btnId, inputVal);
 }
