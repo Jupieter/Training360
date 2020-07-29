@@ -53,7 +53,32 @@
             "action" : "Action",
             "ingredients" : "meat, salad, tomato, cucumber, onion, spices,",
             "price": 4
+        },
+        {
+            "id" : 5,
+            "active" : true,
+            "foodType" : "1",
+            "foodname" : "Hamburger V1",
+            "action" : "",
+            "ingredients" : "meat, salad, tomato, cucumber, onion, spices,",
+            "price": 4
         }
-    ]
-
+    ],
+    "posts": [
+        {
+          "id": 1,
+          "title": "json-server",
+          "author": "typicode"
+        }
+      ],
+      "comments": [
+        {
+          "id": 1,
+          "body": "some comment",
+          "postId": 1
+        }
+      ],
+      "profile": {
+        "name": "typicode"
+      }
 }
