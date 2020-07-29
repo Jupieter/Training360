@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
     "foodTypes": ["Meat", "Vegan", "Salads", "Drink"],
     "keys" : [ "id",
         "active", 
@@ -81,4 +82,122 @@
       "profile": {
         "name": "typicode"
       }
+=======
+  "foodTypes": [
+    "Meat",
+    "Vegan",
+    "Salads",
+    "Drink"
+  ],
+  "keys": [
+    "id",
+    "active",
+    "foodType",
+    "action",
+    "foodname",
+    "ingredients",
+    "price",
+    "buttons"
+  ],
+  "foods": [
+    {
+      "id": 0,
+      "active": true,
+      "foodType": 0,
+      "foodname": "Hamburger 0",
+      "action": "New",
+      "ingredients": "meat, salad, tomato, cucumber, onion, spices,",
+      "price": 4
+    },
+    {
+      "id": 1,
+      "active": false,
+      "foodType": 0,
+      "foodname": "Hamburger 1",
+      "action": "New",
+      "ingredients": "meat, salad, tomato, cucumber, onion, spices,",
+      "price": 4
+    },
+    {
+      "id": 2,
+      "active": true,
+      "foodType": 0,
+      "foodname": "Hamburger 2",
+      "action": "",
+      "ingredients": "meat, salad, tomato, cucumber, onion, spices,",
+      "price": 4
+    },
+    {
+      "id": 3,
+      "active": true,
+      "foodType": 0,
+      "foodname": "Hamburger 3",
+      "action": "",
+      "ingredients": "meat, salad, tomato, cucumber, onion, spices,",
+      "price": 4
+    },
+    {
+      "id": 4,
+      "active": true,
+      "foodType": 0,
+      "foodname": "Hamburger 4",
+      "action": "Action",
+      "ingredients": "meat, salad, tomato, cucumber, onion, spices,",
+      "price": 4
+    },
+    {
+      "id": 5,
+      "active": true,
+      "foodType": 1,
+      "foodname": "Hamburger V1",
+      "action": "Action",
+      "ingredients": "cheese, salad, tomato, cucumber, onion, spices,",
+      "price": 4
+    },
+    {
+      "id": 6,
+      "active": true,
+      "foodType": 1,
+      "foodname": "Hamburger V2",
+      "action": "",
+      "ingredients": "cheese, salad, tomato, cucumber, onion, spices,",
+      "price": 4
+    },
+    {
+      "id": 7,
+      "active": "false",
+      "foodType": "1",
+      "action": "",
+      "foodname": "Hamburger V3",
+      "ingredients": "cheese, salad, tomato, cucumber, onion, spices,",
+      "price": "4",
+      "buttons": "undefined"
+    },
+    {
+      "id": 8,
+      "active": true,
+      "foodType": 2,
+      "foodname": "Salad 1",
+      "action": "",
+      "ingredients": "ice-salad",
+      "price": 4
+    },
+    {
+      "id": 9,
+      "active": "true",
+      "foodType": "3",
+      "action": "",
+      "foodname": "Coca-Cola",
+      "ingredients": "sugar",
+      "price": "1"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ]
+>>>>>>> 1fa14028672576f2033b7b2811a57c147329f72c
 }

@@ -2,6 +2,8 @@ F:
 cd F:\GIT\Training360
 git status
 git add .
-git commit -m "today automatic status + add. + commit + status + push"
+set /p UserInput=What is the commit-message?
+%UserInput%
+git commit -m "%UserInput%"
 git push
 git status
