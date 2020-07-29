@@ -181,7 +181,7 @@ function createBtnGroup(dataId) {
     group2.innerHTML = "";
 
     let minusBtn = createAnyElement("button", {
-        id: dataId,
+        name: dataId,
         class: "input-group-btn btn btn-default btn-number",
         datatype: "minus",
         onclick: "setRow(this)",
@@ -190,16 +190,16 @@ function createBtnGroup(dataId) {
     minusBtn.innerHTML = '<i class="far fa-minus-square"></i>';
 
     let input = createAnyElement("input", {
-        id: dataId,
+        name: dataId,
         class: "form-control",
         maxlength: "2",
         size: 4,
         value: 0,
-        name: dataId,
+
     });
-    
+
     let plusBtn = createAnyElement("button", {
-        id: dataId,
+        name: dataId,
         class: "input-group-btn btn btn-default btn-number",
         datatype: "plus",
         onclick: "addPlusToInput(this)",
@@ -207,23 +207,23 @@ function createBtnGroup(dataId) {
     });
     plusBtn.innerHTML = '<i class="far fa-plus-square"></i>';
     // plusBtn.addEventListener("click", addPlusToInput);
-    
+
     let infoBtn = createAnyElement("button", {
-        id: dataId,
+        name: dataId,
         class: "btn btn-success",
         onclick: "setRow(this)",
         style: "margin: 0px"
     });
     infoBtn.innerHTML = '<i class="fas fa-shopping-basket"></i>';
-    
+
     let delBtn = createAnyElement("button", {
-        id: dataId,
+        name: dataId,
         class: "btn btn-danger",
         onclick: "delRow(this)",
         style: "margin: 0px"
     });
     delBtn.innerHTML = '<i class="fas fa-trash-alt"></i>';
-    
+
     group1.appendChild(minusBtn);
     group1.appendChild(input);
     group1.appendChild(plusBtn);
@@ -236,9 +236,10 @@ function createBtnGroup(dataId) {
     //console.log(td);
     return td;
 }
-function addPlusToInput(btn){
-    let btnId = btn.id;
-    let inputs = document.querySelector("input",#${btnId});
+function addPlusToInput(btn) {
+    let btnId = btn.name;
+    const newLocal = " input[name='" + btnId + "']";
+    let inputs = document.querySelector(newLocal)
     let inputVal = inputs.value 
-    console.log("hozzáad: ", btnId, inputVal);
+    console.log("hozzáad: ", btnId, inputsVal);
 }
