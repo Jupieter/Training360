@@ -81,7 +81,7 @@ function createTableHeader(keys, tableID) {
 function craeteAllTable(data) {
     keys = Object.keys(data[0]);
     keys.push("buttons");
-    // console.log("keys: ", keys);
+    console.log("keys: ", keys);
     for (let i = 0; i < tableId.length; i++) {
         createTableHeader(keys, tableId[i]);
     }
@@ -158,8 +158,7 @@ function fillDataTable(data,) {
                 //tr.appendChild(divD);
                 divRD.appendChild(divD);
                 // console.log("divR: ", divRD, "element: ",divD)
-            }
-
+            }                     
             let btnGroup = createBtnGroup(dataId);
             divRD.appendChild(btnGroup);
             tBody[bodyIndex].appendChild(divRD);
@@ -173,7 +172,7 @@ function createBtnGroup(dataId) {
         style: "margin: 0px; padding: 0px",
     });
     group1.innerHTML = "";
-    //console.log(group1);
+    // console.log(data);
     let group2 = createAnyElement("div", {
         class: "btn btn-group",
         style: "margin: 0px; padding: 0px",
@@ -184,7 +183,7 @@ function createBtnGroup(dataId) {
         name: dataId,
         class: "input-group-btn btn btn-default btn-number",
         datatype: "minus",
-        onclick: "setRow(this)",
+        onclick: "addMinusToInput(this)",
         style: "margin: 0px"
     });
     minusBtn.innerHTML = '<i class="far fa-minus-square"></i>';
@@ -240,6 +239,23 @@ function addPlusToInput(btn) {
     let btnId = btn.name;
     const newLocal = " input[name='" + btnId + "']";
     let inputs = document.querySelector(newLocal)
-    let inputVal = inputs.value 
-    console.log("hozzáad: ", btnId, inputsVal);
+    let inputVal = parseInt(inputs.value) 
+    
+    inputVal += 1;
+    if (inputVal >= 3) {
+        inputVal = 0
+        alert("If you want more then 9, please call me: +55/5555-1234"); 
+    };
+    console.log("hozzáad: ", btnId, inputVal); 
+    inputs.value = inputVal
+}
+function addMinusToInput(btn) {
+    let btnId = btn.name;
+    const newLocal = " input[name='" + btnId + "']";
+    let inputs = document.querySelector(newLocal)
+    let inputVal = parseInt(inputs.value) 
+    inputVal -= 1;
+    if (inputVal <= 0) {inputVal = 0 };
+    console.log("hozzáad: ", btnId, inputVal); 
+    inputs.value = inputVal
 }

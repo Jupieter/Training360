@@ -1,5 +1,5 @@
 {
-  "foodTypes": [
+  "ordered": [
     "Meat",
     "Vegan",
     "Salads",
@@ -22,7 +22,7 @@
       "foodname": "Hamburger 0",
       "action": "New",
       "ingredients": "meat, salad, tomato, cucumber, onion, spices,",
-      "price": 4
+      "price": 4      
     },
     {
       "id": 1,
@@ -31,7 +31,7 @@
       "foodname": "Hamburger 1",
       "action": "New",
       "ingredients": "meat, salad, tomato, cucumber, onion, spices,",
-      "price": 4
+      "price": 4      
     },
     {
       "id": 2,
@@ -40,7 +40,7 @@
       "foodname": "Hamburger 2",
       "action": "",
       "ingredients": "meat, salad, tomato, cucumber, onion, spices,",
-      "price": 4
+      "price": 4      
     },
     {
       "id": 3,
@@ -58,7 +58,7 @@
       "foodname": "Hamburger 4",
       "action": "Action",
       "ingredients": "meat, salad, tomato, cucumber, onion, spices,",
-      "price": 4
+      "price": 4      
     },
     {
       "id": 5,
@@ -68,6 +68,7 @@
       "foodname": "Hamburger Vegan 1",
       "ingredients": "mushroom, salad, tomato, cucumber, onion, spices,",
       "price": "4"
+      
     },
     {
       "active": "true",

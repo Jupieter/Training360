@@ -6,7 +6,8 @@ let keys = [ "id",
 "action", 
 "foodname", 
 "ingredients", 
-"price"];
+"price",
+"piece"];
 
 function createAnyElement(name, attributes) {
     let element = document.createElement(name)
