@@ -1,4 +1,4 @@
-var serverUrl1 = "http://localhost:3000/foodTypes";
+var serverUrl1 = "http://localhost:3000/orders";
 var serverUrl2 = "http://localhost:3000/keys";
 var serverUrl3 = "http://localhost:3000/foods";
 let tableId = ["Food1", "Food2", "Food3", "Food4", "Food5"];
@@ -28,6 +28,7 @@ getServerData(serverUrl3).then(
     data => craeteAllTable(data),
     err => console.error(err)
 );
+
 
 function createTableHeader(keys, tableID) {
     let table = document.querySelector(`#${tableID}`);
@@ -258,4 +259,7 @@ function addMinusToInput(btn) {
     if (inputVal <= 0) {inputVal = 0 };
     console.log("hozzáad: ", btnId, inputVal); 
     inputs.value = inputVal
+}
+function basketLoad(){
+
 }

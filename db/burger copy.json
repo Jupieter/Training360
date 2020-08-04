@@ -1,0 +1,136 @@
+{
+  "ordered": [
+    "Meat",
+    "Vegan",
+    "Salads",
+    "Drink"
+  ],
+  "keys": [
+    "id",
+    "active",
+    "foodType",
+    "action",
+    "foodname",
+    "ingredients",
+    "price"
+  ],
+  "foods": [
+    {
+      "id": 0,
+      "active": true,
+      "foodType": "0",
+      "foodname": "Hamburger 0",
+      "action": "New",
+      "ingredients": "meat, salad, tomato, cucumber, onion, spices,",
+      "price": 4      
+    },
+    {
+      "id": 1,
+      "active": false,
+      "foodType": "0",
+      "foodname": "Hamburger 1",
+      "action": "New",
+      "ingredients": "meat, salad, tomato, cucumber, onion, spices,",
+      "price": 4      
+    },
+    {
+      "id": 2,
+      "active": true,
+      "foodType": "0",
+      "foodname": "Hamburger 2",
+      "action": "",
+      "ingredients": "meat, salad, tomato, cucumber, onion, spices,",
+      "price": 4      
+    },
+    {
+      "id": 3,
+      "active": true,
+      "foodType": "0",
+      "foodname": "Hamburger 3",
+      "action": "",
+      "ingredients": "meat, salad, tomato, cucumber, onion, spices,",
+      "price": 4
+    },
+    {
+      "id": 4,
+      "active": true,
+      "foodType": "0",
+      "foodname": "Hamburger 4",
+      "action": "Action",
+      "ingredients": "meat, salad, tomato, cucumber, onion, spices,",
+      "price": 4      
+    },
+    {
+      "id": 5,
+      "active": "true",
+      "foodType": "1",
+      "action": "",
+      "foodname": "Hamburger Vegan 1",
+      "ingredients": "mushroom, salad, tomato, cucumber, onion, spices,",
+      "price": "4"
+      
+    },
+    {
+      "active": "true",
+      "foodType": "1",
+      "action": "",
+      "foodname": "Hamburger Vegan 2",
+      "ingredients": "cheese, salad, tomato, cucumber, onion, spices,",
+      "price": "4",
+      "id": 6
+    },
+    {
+      "active": "true",
+      "foodType": "2",
+      "action": "",
+      "foodname": "Salad 1",
+      "ingredients": "icberg salad",
+      "price": "1",
+      "id": 7
+    },
+    {
+      "active": "true",
+      "foodType": "3",
+      "action": "",
+      "foodname": "Coca-Cola",
+      "ingredients": "suger",
+      "price": "1",
+      "id": 8
+    },
+    {
+      "active": "true",
+      "foodType": "3",
+      "action": "",
+      "foodname": "Fanta",
+      "ingredients": "orange",
+      "price": "1",
+      "id": 9
+    },
+    {
+      "active": "true",
+      "foodType": "4",
+      "action": "",
+      "foodname": "Shake 1",
+      "ingredients": "vanilie",
+      "price": "1",
+      "id": 10
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
